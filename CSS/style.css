@@ -27,6 +27,14 @@ body {
     padding-right: 48px;
 }
 
+.text_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
 .navigation {
     position: fixed;
     width: 100%;
@@ -2325,11 +2333,13 @@ select {
 .contacts_block {
     border-radius: 8px;
     padding: 48px;
-    width: 1824px;
+    max-width: 1824px;
+    width: 100%;
     height: 192px;
     background: #252525;
     display: flex;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .contacts_block h3 {
@@ -2339,6 +2349,7 @@ select {
     line-height: 150%;
     letter-spacing: 0.03em;
     color: #848484;
+    margin-bottom: 17px;
 }
 
 .contacts_block h2 {
@@ -2356,4 +2367,78 @@ select {
     line-height: 130%;
     color: #d5d4d4;
     text-decoration: none;
+}
+
+.messengers_contacts {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.messengers_contacts a img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
+.messengers_contacts a:hover img {
+    opacity: 0.7;
+}
+
+.page_news {
+    background-image: url(/imgs/page_news.svg);
+}
+
+.articles_news_block_page {
+    background-image: url(../imgs/back_news.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 64px;
+    max-width: 1824px;
+    max-height: 811px;
+    position: relative;
+}
+
+.news_inf h1 {
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.news_inf p {
+    font-family: Gilroy_Regular, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #d5d4d4;
+}
+
+.news_inf {
+    padding-top: 170px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.articles_news_block_page h2 {
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.news_inf_privacy {
+    font-family: Exo_2_Light, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: #d5d4d4;
 }
