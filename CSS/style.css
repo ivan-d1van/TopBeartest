@@ -2442,3 +2442,48 @@ select {
     letter-spacing: 0.03em;
     color: #d5d4d4;
 }
+
+.HOH_worck {
+    background-image: url(/imgs/404_worck.svg);
+}
+
+.mega_txt_HOH {
+    text-align: center;
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 235px;
+    margin-bottom: 160px;
+    width: 993px;
+    height: 759px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mega_txt_HOH p {
+    font-family: Exo_2_Light, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #d5d4d4;
+}
+
+.mega_txt_HOH h1 {
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.mega_txt_worck {
+    padding-top: 345px;
+    margin-bottom: 160px;
+    width: 993px;
+    height: 759px;
+}
