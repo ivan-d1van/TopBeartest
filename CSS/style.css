@@ -679,6 +679,35 @@ body {
     text-decoration: none;
 }
 
+.swiper_cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стилизуй сами кнопки, если нужно */
+.swiper-button-prev,
+.swiper-button-next {
+    position: static !important;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    margin-right: -2%;
+    margin-left: -2%;
+}
+
+.swiper-button-next {
+    margin-right: -2%;
+    margin-left: -2%;
+}
+
+.mySwiper {
+    flex: 1;
+}
+
 .services_block h2 {
     margin-bottom: 64px;
     font-family: Benzin_Semibold, sans-serif;
@@ -2486,4 +2515,50 @@ select {
     margin-bottom: 160px;
     width: 993px;
     height: 759px;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs_item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs_item:not(:last-child)::after {
+    margin: 0 10px;
+    color: #999;
+}
+
+.breadcrumbs_link {
+    text-decoration: none;
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #fff;
+}
+
+
+.breadcrumbs_current {
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+}
+
+.breadcrumbs {
+    padding-top: 100px;
+}
+
+.details_services {
+    background-image: url(../imgs/back_details.svg);
 }
