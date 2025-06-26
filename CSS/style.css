@@ -2557,54 +2557,208 @@ select {
 }
 
 .breadcrumbs {
-    padding-top: 100px;
+    padding-top: 70px;
+    margin-bottom: 24px;
 }
 
 .details_services {
     background-image: url(../imgs/back_details.svg);
 }
 
-.swiper_vertical_wrapper {
+.product-swiper-wrapper {
     display: flex;
-    flex-direction: column;
+    gap: 24px;
+    max-width: 888px;
     align-items: center;
-    height: 500px;
-    width: 300px;
-    position: relative;
 }
 
-.newSwiper {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+.product-thumbs {
+    width: 256px;
+    height: 600px;
 }
 
-.newSwiper .swiper-slide {
-    height: auto;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
-
-.newSwiper .swiper-slide-active {
-    opacity: 1;
-}
-
-.swiper-button-up,
-.swiper-button-down {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
+.product-thumbs .swiper-slide {
+    height: 120px;
+    opacity: 0.4;
     cursor: pointer;
 }
 
-.swiper-button-up img,
-.swiper-button-down img {
-    width: 24px;
-    height: 24px;
+.product-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.product-thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-main {
+    width: 600px;
+    height: 600px;
+    flex: 1;
+}
+
+.product-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Теперь позиционируем вертикально и по центру миниатюр */
+/* Центрируем стрелки вверх/вниз над миниатюрами */
+.swiper-button-vertical-up,
+.swiper-button-vertical-down {
+    position: absolute !important;
+    left: 128px !important;
+    /* половина ширины thumbs */
+    transform: translateX(-50%) !important;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.swiper-button-vertical-up {
+    top: 185px !important;
+    left: 240px !important;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 100px;
+    width: 56px;
+    height: 56px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(180deg);
+}
+
+.swiper-button-vertical-down {
+    top: 775px !important;
+    left: 240px !important;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 100px;
+    width: 56px;
+    height: 56px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(180deg);
+}
+
+/* Поворачиваем стрелки */
+.swiper-button-vertical-up img {
+    transform: rotate(270deg);
+}
+
+.swiper-button-vertical-down img {
+    transform: rotate(90deg);
+
+}
+
+/* Родитель нужен для position: relative */
+.product-swiper-wrapper {
+    display: flex;
+    gap: 24px;
+    max-width: 888px;
+    align-items: center;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    display: none;
+}
+
+.inf_services {
+    display: flex;
+    gap: 48px;
+}
+
+#toggleButton {
+    border: none;
+    background-color: transparent;
+    font-family: Gilroy_Regular, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.txt_inf_block p {
+    font-family: Gilroy_Regular, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #d5d4d4;
+}
+
+.txt_inf_block_firstp {
+    margin-bottom: 12px;
+}
+
+.but_details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.but_details button {
+    background-color: transparent;
+    border: none;
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #626262;
+    padding: 24px 32px 24px 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.but_details button:hover {
+    color: #c7c7c7;
+    transform: translateY(-2px);
+}
+
+.price_but {
+    display: flex;
+    gap: 24px;
+}
+
+.price_but h3 {
+    font-family: Benzin_Semibold, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #e9e9e9;
+}
+
+.price_but button {
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    padding: 16px 24px;
+    width: 250px;
+    height: 61px;
+    background: #fff;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
 }
